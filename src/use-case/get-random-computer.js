@@ -8,5 +8,5 @@ export const getRandomComputer = () => {
     }
     let optionsComputer=Object.entries(option)
     optionsComputer=_.shuffle(optionsComputer)
-    return optionsComputer[0][0]
+    return Number(optionsComputer[0][0])
 }
