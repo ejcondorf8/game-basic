@@ -1,7 +1,10 @@
+import html from './app.html?raw'
+import {getRandomComputer, play} from './use-case'
 
-import {getRandomComputer, play} from '../use-case'
+export const App=(element)=>{
 
-const btn=document.querySelector('#rock')
+    const displayResult=()=>{
+        const btn=document.querySelector('#rock')
 const btn2=document.querySelector('#paper')
 const btn3=document.querySelector('#scissors')
 const resultHTML=document.querySelector('#result')
@@ -32,3 +35,20 @@ btn3.addEventListener('click', ()=>{
     resultHTML.innerHTML=result+': Tu opcion fue tijera  y la computadora eligio '+ optionCompueterHtml
 })
 
+
+        
+        
+    }
+    
+    (()=>{
+        const app=document.createElement('div')
+        app.innerHTML=html
+        document.querySelector(element).append(app)
+        displayResult()
+        console.log('app',app)
+    
+    })();
+
+
+
+}

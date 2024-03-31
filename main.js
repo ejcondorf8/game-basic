@@ -1,3 +1,7 @@
 import './style.css'
-import './src/game/index'
+import {App} from './src/app'
 
+
+
+
+App('#app')
